@@ -19,3 +19,10 @@ jobs:
       - name: Run jabba
         shell: bash
         run: ./jabba ls-remote
+      - name: Download JDK
+        shell: bash
+        run: |
+          curl -sL -o jdk.tar.gz https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.11%2B9/OpenJDK11U-jdk_x64_linux_hotspot_11.0.11_9.tar.gz
+      - name: List files
+        shell: bash
+        run: ls
