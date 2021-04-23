@@ -1,0 +1,20 @@
+name: Install Java
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  java:
+    name: Install Java
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download jabba
+        shell: bash
+        run: |
+          curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
+      - name: Run jabba
+        shell: bash
+        run: jabba ls-remote
