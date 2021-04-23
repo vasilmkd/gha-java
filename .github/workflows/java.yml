@@ -14,7 +14,7 @@ jobs:
       - name: Download jabba
         shell: bash
         run: |
-          curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
+          curl -sL -o jabba https://github.com/shyiko/jabba/releases/download/0.11.2/jabba-0.11.2-linux-amd64
       - name: Run jabba
         shell: bash
-        run: jabba ls-remote
+        run: ./jabba ls-remote
