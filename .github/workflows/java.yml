@@ -26,3 +26,7 @@ jobs:
       - name: List files
         shell: bash
         run: ls
+      - name: Install JDK
+        shell: bash
+        run: |
+          ./jabba install adopt@11=tgz+file://$(pwd)/jdk.tar.gz
