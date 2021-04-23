@@ -14,7 +14,7 @@ jobs:
       - name: Download jabba
         shell: bash
         run: |
-          curl -sL -o jabba https://github.com/shyiko/jabba/releases/download/0.11.2/jabba-0.11.2-linux-amd64
+          curl -sL -o jabba https://github.com/shyiko/jabba/releases/download/0.11.2/jabba-0.11.2-linux-amd64 && chmod 755 jabba
       - name: Run jabba
         shell: bash
         run: ./jabba ls-remote
